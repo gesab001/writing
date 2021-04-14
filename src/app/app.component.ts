@@ -10,7 +10,9 @@ import { UpdateService } from './update.service';
 export class AppComponent implements AfterViewInit {
   title = 'writing';
   private context: CanvasRenderingContext2D;
-  canvas = false;
+  canvas: HTMLCanvasElement;
+  canvasWidth = 0;
+  canvasHeight = 0;
   text = '';
   fontInt = 30;
   fontSize = "30px"; 
@@ -42,8 +44,10 @@ export class AppComponent implements AfterViewInit {
   ngAfterViewInit(): void {
 	this.canvas =  this.canvasEl.nativeElement as HTMLCanvasElement;
 	this.context = this.canvas.getContext('2d');
-	this.context.canvas.width  = window.innerWidth;
-    this.context.canvas.height = window.innerHeight;
+	this.canvasWidth = window.innerWidth - 50;
+	this.canvasHeight = window.innerHeight - 100;
+	this.context.canvas.width  = this.canvasWidth;
+    this.context.canvas.height = this.canvasHeight;
 	
     //this.draw();
   }
@@ -95,7 +99,7 @@ export class AppComponent implements AfterViewInit {
    }
 	  
   private drawText() {
-    this.context.clearRect(0, 0, window.innerWidth, window.innerHeight);
+    this.context.clearRect(0, 0, this.canvasWidth, this.canvasHeight);
     this.context.font = this.fontSize + " Trace-lxy0";
     this.context.textBaseline = 'top';
     this.context.textAlign = 'left';
@@ -133,34 +137,68 @@ export class AppComponent implements AfterViewInit {
   }  
   
   findxy(res, e) {
-        if (res == 'down') {
-            this.prevX = this.currX;
-            this.prevY = this.currY;
-            this.currX = e.clientX - this.canvas.offsetLeft;
-            this.currY = e.clientY - this.canvas.offsetTop;
-    
-            this.flag = true;
-            this.dot_flag = true;
-            if (this.dot_flag) {
-                this.context.beginPath();
-                this.context.fillStyle = this.x;
-                this.context.fillRect(this.currX, this.currY, 2, 2);
-                this.context.closePath();
-                this.dot_flag = false;
-            }
-        }
-        if (res == 'up' || res == "out") {
-            this.flag = false;
-        }
-        if (res == 'move') {
-            if (this.flag) {
-                this.prevX = this.currX;
-                this.prevY = this.currY;
-                this.currX = e.clientX - this.canvas.offsetLeft;
-                this.currY = e.clientY - this.canvas.offsetTop;
-                this.write();
-            }
-        }
+	    e.preventDefault();
+	    if(e.type.startsWith('touch')){
+			if (res == 'down') {
+				
+				this.prevX = this.currX;
+				this.prevY = this.currY;
+				this.currX = e.touches[0].clientX - this.canvas.offsetLeft;
+				this.currY = e.touches[0].clientY - this.canvas.offsetTop;
+		
+				this.flag = true;
+				this.dot_flag = true;
+				if (this.dot_flag) {
+					this.context.beginPath();
+					this.context.fillStyle = this.x;
+					this.context.fillRect(this.currX, this.currY, 2, 2);
+					this.context.closePath();
+					this.dot_flag = false;
+				}
+			}
+			if (res == 'up' || res == "out") {
+				this.flag = false;
+			}
+			if (res == 'move') {
+				if (this.flag) {
+					this.prevX = this.currX;
+					this.prevY = this.currY;
+					this.currX = e.touches[0].clientX - this.canvas.offsetLeft;
+					this.currY = e.touches[0].clientY - this.canvas.offsetTop;
+					this.write();
+				}
+			}
+		}else{			
+			if (res == 'down') {
+				
+				this.prevX = this.currX;
+				this.prevY = this.currY;
+				this.currX = e.clientX - this.canvas.offsetLeft;
+				this.currY = e.clientY - this.canvas.offsetTop;
+		
+				this.flag = true;
+				this.dot_flag = true;
+				if (this.dot_flag) {
+					this.context.beginPath();
+					this.context.fillStyle = this.x;
+					this.context.fillRect(this.currX, this.currY, 2, 2);
+					this.context.closePath();
+					this.dot_flag = false;
+				}
+			}
+			if (res == 'up' || res == "out") {
+				this.flag = false;
+			}
+			if (res == 'move') {
+				if (this.flag) {
+					this.prevX = this.currX;
+					this.prevY = this.currY;
+					this.currX = e.clientX - this.canvas.offsetLeft;
+					this.currY = e.clientY - this.canvas.offsetTop;
+					this.write();
+				}
+			}
+		}
     }
   open() {
     window.open('https://github.com/realappie', '_blank')
