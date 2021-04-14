@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1618394012781,
+  "timestamp": 1618426212863,
   "index": "/writing/index.html",
   "assetGroups": [
     {
@@ -13,22 +13,24 @@
       "urls": [
         "/writing/favicon.ico",
         "/writing/index.html",
-        "/writing/main.94eaf436a4e81652f002.js",
+        "/writing/main.1a2742fac4f34c5bdb46.js",
         "/writing/manifest.webmanifest",
         "/writing/polyfills.35a5ca1855eb057f016a.js",
         "/writing/runtime.acf0dec4155e77772545.js",
-        "/writing/styles.3ff695c00d717f2d2a11.css"
+        "/writing/styles.819041aca2f6f766f588.css"
       ],
       "patterns": []
     },
     {
       "name": "assets",
-      "installMode": "lazy",
+      "installMode": "prefetch",
       "updateMode": "prefetch",
       "cacheQueryOptions": {
         "ignoreVary": true
       },
       "urls": [
+        "/writing/Trace-lxy0.b27e08e20019f99e7373.ttf",
+        "/writing/assets/fonts/Trace-lxy0.ttf",
         "/writing/assets/icons/icon-128x128.png",
         "/writing/assets/icons/icon-144x144.png",
         "/writing/assets/icons/icon-152x152.png",
@@ -43,6 +45,8 @@
   ],
   "dataGroups": [],
   "hashTable": {
+    "/writing/Trace-lxy0.b27e08e20019f99e7373.ttf": "d587f2df246e42fe1a9ad15c0855151ee8592823",
+    "/writing/assets/fonts/Trace-lxy0.ttf": "d587f2df246e42fe1a9ad15c0855151ee8592823",
     "/writing/assets/icons/icon-128x128.png": "dae3b6ed49bdaf4327b92531d4b5b4a5d30c7532",
     "/writing/assets/icons/icon-144x144.png": "b0bd89982e08f9bd2b642928f5391915b74799a7",
     "/writing/assets/icons/icon-152x152.png": "7479a9477815dfd9668d60f8b3b2fba709b91310",
@@ -52,12 +56,12 @@
     "/writing/assets/icons/icon-72x72.png": "c457e56089a36952cd67156f9996bc4ce54a5ed9",
     "/writing/assets/icons/icon-96x96.png": "3914125a4b445bf111c5627875fc190f560daa41",
     "/writing/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
-    "/writing/index.html": "3445eb62eaab405421bd04ed58b58a7ec704ccbe",
-    "/writing/main.94eaf436a4e81652f002.js": "fd1ebfdabf7dccbd6fca39458c0c18eaac87e440",
+    "/writing/index.html": "a22e14dbb78dba254089cbae66ba07a84c1f9361",
+    "/writing/main.1a2742fac4f34c5bdb46.js": "1147b50ecf316e382d5fb4ef6a74c323e110c773",
     "/writing/manifest.webmanifest": "3a2aa4d6575db208b47014c8413c8def0a81de6e",
     "/writing/polyfills.35a5ca1855eb057f016a.js": "578360d24ce37383f261c7ef63b1f822d28e8dde",
     "/writing/runtime.acf0dec4155e77772545.js": "a9aafcf49f49145093fc831efd9b8e2f6c71bb9c",
-    "/writing/styles.3ff695c00d717f2d2a11.css": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+    "/writing/styles.819041aca2f6f766f588.css": "5d1695ae9c14bcb818c0344efc1245b60dc59ca8"
   },
   "navigationUrls": [
     {
