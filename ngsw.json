@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1618440641571,
+  "timestamp": 1626284331057,
   "index": "/writing/index.html",
   "assetGroups": [
     {
@@ -13,11 +13,11 @@
       "urls": [
         "/writing/favicon.ico",
         "/writing/index.html",
-        "/writing/main.13917673ee90003ce0ba.js",
+        "/writing/main.40d8f9471844c8182366.js",
         "/writing/manifest.webmanifest",
-        "/writing/polyfills.35a5ca1855eb057f016a.js",
-        "/writing/runtime.acf0dec4155e77772545.js",
-        "/writing/styles.4258bfd685808a8d1ab2.css"
+        "/writing/polyfills.5e39916fc0ac71b7d423.js",
+        "/writing/runtime.72e7f86255f2036f8af2.js",
+        "/writing/styles.99ef89dc17675ad3a1e2.css"
       ],
       "patterns": []
     },
@@ -56,12 +56,12 @@
     "/writing/assets/icons/icon-72x72.png": "c457e56089a36952cd67156f9996bc4ce54a5ed9",
     "/writing/assets/icons/icon-96x96.png": "3914125a4b445bf111c5627875fc190f560daa41",
     "/writing/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
-    "/writing/index.html": "d880798c47fb76145ff63a19ca4b88ea8b1fd718",
-    "/writing/main.13917673ee90003ce0ba.js": "41491276975de0661114d47e6396dd433dd0f7e6",
+    "/writing/index.html": "dbd5651e91df8c9883b74bd88602833303805632",
+    "/writing/main.40d8f9471844c8182366.js": "78e2a2c4302a42b1595d67c97dbc2644469b02c3",
     "/writing/manifest.webmanifest": "3a2aa4d6575db208b47014c8413c8def0a81de6e",
-    "/writing/polyfills.35a5ca1855eb057f016a.js": "578360d24ce37383f261c7ef63b1f822d28e8dde",
-    "/writing/runtime.acf0dec4155e77772545.js": "a9aafcf49f49145093fc831efd9b8e2f6c71bb9c",
-    "/writing/styles.4258bfd685808a8d1ab2.css": "81e4642bd6ff7717184c7db3aba3e13b1752dfc8"
+    "/writing/polyfills.5e39916fc0ac71b7d423.js": "8730b61faccc65180f1b93e5b5928080a8cfcd0b",
+    "/writing/runtime.72e7f86255f2036f8af2.js": "d2d94a2fe9baed5afa799034337623e461ccd5e4",
+    "/writing/styles.99ef89dc17675ad3a1e2.css": "81e4642bd6ff7717184c7db3aba3e13b1752dfc8"
   },
   "navigationUrls": [
     {
@@ -80,5 +80,6 @@
       "positive": false,
       "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
     }
-  ]
+  ],
+  "navigationRequestStrategy": "performance"
 }
